@@ -55,7 +55,8 @@ var webConf = {
 	module: {
 		loaders: [
 		    {	test: /\.js$/, 
-		    	loader: 'babel?presets[]=es2015'
+		    	exclude: /(node_modules|zepto)/,
+		    	loader: 'babel?cacheDirectory&presets[]=es2015'
 		    },
 		    {
 		    	test: /\.(png|jpg|gif)$/,
