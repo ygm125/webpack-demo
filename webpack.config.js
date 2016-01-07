@@ -53,14 +53,15 @@ var entryKeys = Object.keys(entryMap);
 var webConf = {
 	entry: entryMap,
 	module: {
+		noParse: ["zepto"],
 		loaders: [
 		    {	test: /\.js$/, 
-		    	exclude: /(node_modules|zepto)/,
+		    	exclude: /node_modules/,
 		    	loader: 'babel?cacheDirectory&presets[]=es2015'
 		    },
 		    {
 		    	test: /\.(png|jpg|gif)$/,
-		    	loader: 'url-loader?limit=1024&name=/img/[name].[hash:5].[ext]'
+		    	loader: 'url-loader?limit=8092&name=/img/[name].[hash:5].[ext]'
 		    }
 		]
 	},
