@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "BUILD_DEV=1 webpack-dev-server --inline --hot --content-base src/",
-    "pro": "webpack && webpack-dev-server --content-base build/",
+    "pro": "webpack-dev-server --content-base build/",
     "build": "webpack"
   },
   "author": "gm",
